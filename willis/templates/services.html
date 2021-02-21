@@ -1,0 +1,244 @@
+{% extends 'index.html' %}
+{% load static %}
+{%block content%}
+
+<div class="container">
+    <div class="details">
+    <div class=" sevrvies">
+      <h1> SERVICES</h1>
+      <p>Our company offer different services depending on the industry you are intrested in.</p>
+    </div>
+    </div>
+    <div class="main-box">
+      <div class="box box-grey">
+        <div class="icon">
+            <i class="fa fa-desktop" aria-hidden="true"></i>
+        </div>
+        <h2 class="electrical"> ARAN TECHNOLOGIES</h2>
+        <hr>
+        <p>Aran Technologies offer different kind of technology solution ranging fro software Development to web Development and others</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <div class="box box-red">
+        <div class="icon">
+            <i class="fa fa-hospital-o" aria-hidden="true"></i>
+        </div>
+        <h2>ARAN HOSPITAL</h2>
+        <hr>
+        <p>Aran Hospital offer different Hospital services ranging from outpatient , dentist, surgaries, inpatient and matuary services.</p>
+        <a href="#" class="white-border">Read More</a>
+      </div>
+      
+      <div class="box box-grey">
+        <div class="icon">
+            <i class="fa fa-bed" aria-hidden="true"></i>
+        </div>
+        <h2>ARAN HOTEL</h2>
+        <hr>
+        <p>Aran Hotel is the place to be , because of our excutive services from our able and polite staff.</p>
+        <a href="#">Read More</a>
+      </div>
+
+    </div>
+
+  </div>
+  
+
+  <div class="containers">
+    <div class="detail">
+     
+    <div class="main-box">
+      <div class="box box-grey">
+        <div class="icon">
+            <i class="fa fa-road" aria-hidden="true"></i>
+        </div>
+        <h2>ARAN CONSTRACTIONS </h2>
+        <hr>
+        <P> Aran Constractions offer all construction services from Road Constraction, Building construction ,Electricity constructons and constructons repair</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <div class="box box-red">
+        <div class="icon">
+            <i class="fa fa-television" aria-hidden="true"></i>
+        </div>
+        <h2 class="electrical">ARAN ELECTRICAL AND ELECTRONICS</h2>
+        <hr>
+        <p>If you need any ELECTRONICS or ELECTRICAL equipments then Aran Electrical and electronics is the place for you.</p>
+        <a href="#" class="white-border">Read More</a>
+      </div>
+      
+      <div class="box box-grey">
+        <div class="icon">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>
+        </div>
+        <h2>ARAN SUPERMARKET</h2>
+        <hr>
+        <p>For everyone who need a retail and wholesale shop then Aran Supermarket if the place for.</p>
+        <a href="#">Read More</a>
+      </div>
+
+    </div>
+
+  </div>
+<!--sylying-->
+<style>
+/* #243238
+ #404044
+ #D50000
+*/
+
+body{
+  font-family: poppins;
+  margin: 0;
+  display: grid;
+  font-size: 14px;
+
+}
+
+.containers{
+  width:80%;
+  margin: 0 auto;
+}
+
+.container{
+  width:80%;
+  margin: 0 auto;
+}
+
+.details{
+  text-align: center;
+}
+.detail{
+  text-align: center;
+}
+
+.details h2{
+  color:#243238;
+  font-size:30px;
+  margin: 0;
+}
+.sevrvies h1{
+  color:gold;
+  font-size:50px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.sevrvies p{
+    font-size: 20px;
+    color: greenyellow;
+}
+.detail h2{
+  color:white;
+  font-size:25px;
+  margin: 0;
+}
+.electrical{
+    font-size: 20;
+}
+.main-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  text-align: center;
+  padding: 40px 20px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+
+}
+.box > * {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.box::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.box:hover::before{
+  width: 95%;
+  height: 95%;
+  transition: all ease .50s;
+}
+
+.box .icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gold;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.box .icon .fas{
+  color: #404044;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+hr{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: block;
+  width: 70%;
+  border: 1px solid rgba(255,255,255, 0.1);
+
+}
+
+.box a{
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color:#D50000 ;
+  padding: 10px 25px;
+  border-radius: 25px;
+  margin-top: 25px;
+  display: inline-block;
+  font-weight: 600 ;
+}
+.box a:hover{
+  background-color:#243238 ;
+}
+
+.box .white-border{
+  border: 1px solid #ffffff;
+}
+
+
+.box-grey{
+  background-color:#404044 ;
+}
+
+.box-red{
+  background-color:#D50000;
+}
+
+    
+</style>
+
+{%endblock content%}
+
+

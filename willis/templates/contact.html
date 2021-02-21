@@ -1,0 +1,268 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{%block content%}
+<section class="contact">
+  <div class="content">
+<h2 class="con"> CONTACT US</h2>
+<p class="p"> Please contact us for further help and clearification about our services and ARAN GROUP OF COMPANIES IN GENERAL,
+  we will always be here to serve you everyday.
+
+</p>
+  </div>
+  <div class="container">
+  <div class="contactInfo">
+    <div class="box">
+      <div class="icon" ><i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+      <div class="text" > 
+      <h3>ADDRESS</h3>
+      <p>41 Kibos Road , <br>Kisumu, Kondele</p>
+      
+    </div>
+    </div> 
+    <div class="box">
+      <div class="icon" ><i class="fa fa-phone" aria-hidden="true"></i>
+      </div>
+      <div class="text" > 
+      <h3>PHONE</h3>
+      <p>0797566520<br>0710685103</p> 
+      
+    </div>
+    </div> 
+    <div class="box">
+      <div class="icon" ><i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </div>
+      <div class="text" > 
+      <h3>EMAIL</h3>
+      <p>Info@arangroup.com<br>arangroup001@gmail.com</p> 
+      
+    </div>
+    </div> 
+
+  </div>
+  </div>
+<div class="contactForm">
+<form method="post">
+  <h2>Send Message</h2>
+    {% csrf_token %}
+    <div class="inputBox">
+  
+  <input name="name" type="text" id="fname" required="required" >
+  <span>Full Name:</span>
+</div>
+<div class="inputBox">
+    <input name="email" type="email"  id="exampleInputEmail1" required="required" >
+    <span>Email:</span>
+  </div>
+
+
+  <div class="inputBox">
+  
+   <textarea  name="subject" id="subject"  required ="required"></textarea>
+   <span>Type your Message.....</span>
+  </div>
+  <div class="inputBox">
+  <button  type="submit" >Send</button>
+        
+  </div>
+
+
+
+</form>
+
+
+</section>
+
+
+
+<style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+
+
+}
+
+.con{
+  font-weight: 700;
+  color: brown;
+  }
+.p{
+  font-size: 15x;
+
+    color: teal;
+}
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(C.jpg);
+    background-size: cover;
+
+    
+  
+}
+.contact .content{
+  max-width: 700px;
+  text-align: center;
+
+}
+.contact .content h2{
+  font-size: 30px;
+  color: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+
+}
+.container .contactInfo{
+
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
+}
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .contactInfo .box .icon{
+  min-width: 59px;
+  height: 59px;
+  background:lightblue;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 15px;
+  color: lightblue;
+  flex-direction: column;
+  font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+  font-weight: 700;
+  color: brown;
+}
+.contactForm{
+  width: 40%;
+  padding: 40px;
+  background: burlywood;
+
+  
+}
+.contactForm h2{
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input ,
+.contactForm .inputBox  textarea
+
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 17px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 17px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input[ type="submit"]
+{
+  width: 100px;
+  background: lightblue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px;){
+  .contact{
+    padding: 50px;
+
+  }
+  .container{
+    flex-direction: column;
+  }
+  .container .contactInfo{
+    margin-bottom: 40px;
+  }
+  .container .contactInfo,
+  .contactForm
+  
+  {
+
+    width: 100%;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+{%endblock content%}
